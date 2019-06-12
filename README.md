@@ -27,3 +27,8 @@ Reverses order of the word route was created and tested. /reverse/Hello world, r
 ### Test for Reverse order
 Unit test for the word reversing functionality was created and tested.
 
+## Instructions to run the app
+1. Run the unit test by entering ./gradlew test in terminal
+2. Run the app by entering ./gradlew bootrun in terminal and checking each url /hello, /capitalize/String, /reverse/String
+
+
