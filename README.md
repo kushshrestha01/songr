@@ -12,9 +12,18 @@ This lab consist of basic setup for spring boot application
 ## Feature Tasks
 Spring App was ensured that it runs correctly
 
-### Hello world route at /hello was created and tested. /hello route returned Hello Woeld
-### Capitalize route was created and tested.Create a route that turns words into UPPER CASE. /capitalize/hello route returned HELLO, /capitalize/this is Kinda Capitalized route returned THIS IS KINDA CAPITALIZED.
-### Unit test for the capitalization functionality was created and tested.
-### Reverses order of the word route was created and tested. /reverse/Hello world, route returned world Hello.
-### Unit test for the word reversing functionality was created and tested.
+### Hello World Route 
+Hello world route at /hello was created and tested. /hello route returned Hello World
+
+### Capitalize Route 
+Capitalize route at /capitalize was created and tested. /capitalize/hello route returned HELLO, /capitalize/this is Kinda Capitalized route returned THIS IS KINDA CAPITALIZED.
+
+### Test for Capitalize
+Unit test for the capitalization functionality was created and tested.
+
+### Reverses order 
+Reverses order of the word route was created and tested. /reverse/Hello world, route returned world Hello.
+
+### Test for Reverse order
+Unit test for the word reversing functionality was created and tested.
 
