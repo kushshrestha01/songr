@@ -2,6 +2,7 @@ package com.shrestha.code401springboot.firstWebApp;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 // Mark this class as a controller, so that SpringBoot Knows to look at it
@@ -19,14 +20,14 @@ public class HelloWorldController {
         return "Hello there, " + name + " from " + from;
     }
 
-    @GetMapping("/capitalize/{string}")
-    public String capitalize(@PathVariable String string) {
+    @GetMapping("/capitalize")
+    public String capitalize(@RequestParam(name = "words") String string) {
         String result = string.toUpperCase();
         return "Capitalize: " + result;
     }
 
-    @GetMapping("/reverse/{string}")
-    public static String reverseSentence(@PathVariable String string) {
+    @GetMapping("/reverse")
+    public static String reverseSentence(@RequestParam(name = "sentence") String string) {
         String[] word = string.split(" ");;
         String[] result = new String[word.length];
         int j = word.length-1;
