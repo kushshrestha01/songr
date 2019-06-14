@@ -28,4 +28,5 @@ public class AlbumController {
         albumRepository.save(add);
         return new RedirectView("/albums");
     }
+
 }
