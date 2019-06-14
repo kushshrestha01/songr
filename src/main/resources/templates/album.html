@@ -8,11 +8,13 @@
     <h1>Album</h1>
     <ul>
         <li th:each="album : ${albums}">
-            <span th:text="${album.artist}"></span>
-            <image th:src="${album.imageUrl}" width=50px></image>
-            <span th:text="${album.length}"></span>
-            <span th:text="${album.songCount}"></span>
-            <span th:text="${album.title}"></span>
+            <ul>
+                <li><span th:text="${album.artist}"></span></li>
+                <li><image th:src="${album.imageUrl}" width=75px alt="image URL"></image></li>
+                <li><span th:text="${album.length}"></span></li>
+                <li><span th:text="${album.songCount}"></span></li>
+                <li><span th:text="${album.title}"></span></li>
+            </ul>
         </li>
     </ul>
 
