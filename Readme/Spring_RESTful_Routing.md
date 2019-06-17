@@ -28,5 +28,3 @@ Form was created for user to add the Album properties then it was saved to album
 1. In terminal run ./gradlew bootrun
 2. Go to localhost:8080/albums should return all the album data with a form to add new Album properties
 3. If new Album data is submitted it will display with other album data. 
-4. localhost:8080/songs will show all the songs and form to add new song
-5. localhost:8080/albums/{album} where{album} is a album name will show the album with all the songs in it.
