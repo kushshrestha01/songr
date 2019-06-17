@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Details</title>
+</head>
+<body>
+    <h1>Albums with Songs</h1>
+    <ul>
+        <li><span th:text="${albums.title}"></span></li>
+    </ul>
+
+    <ul>
+        <li th:each="song : ${albums.getSongs()}">
+            <ul>
+                <li><span th:text="${song.album.title}"></span></li>
+                <li><span th:text="${song.title}"></span></li>
+                <li><span th:text="${song.length}"></span></li>
+                <li><span th:text="${song.trackNumber}"></span></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

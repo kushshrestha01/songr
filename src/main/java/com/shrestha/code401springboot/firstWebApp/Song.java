@@ -14,15 +14,15 @@ public class Song {
 
     private String title;
     private int length;
-    private int trackNumber;
+    private Integer trackNumber;
 
     public Song() {}
 
-    public Song(String title, int length, int trackNumber) {
+    public Song(String title, int length, Integer trackNumber, Album album) {
         this.title = title;
         this.length = length;
         this.trackNumber = trackNumber;
-
+        this.album = album;
     }
 
     public String getTitle() {

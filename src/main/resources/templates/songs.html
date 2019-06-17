@@ -5,16 +5,37 @@
     <title>Song</title>
 </head>
 <body>
-<ul>
-    <li th:each="song : ${songs}">
-        <ul>
-            <li><span th:text="${song.album.title}"></span></li>
-            <li><span th:text="${song.title}"></span></li>
-            <li><span th:text="${song.length}"></span></li>
-            <li><span th:text="${song.trackNumber}"></span></li>
-        </ul>
-    </li>
-</ul>
+    <ul>
+        <li th:each="song : ${songs}">
+            <ul>
+                <li><span th:text="${song.album.title}"></span></li>
+                <li><span th:text="${song.title}"></span></li>
+                <li><span th:text="${song.length}"></span></li>
+                <li><span th:text="${song.trackNumber}"></span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <form action="/addsong" method="POST">
+        Song Title:<br>
+        <input type="text" name="title" value="firstname" required>
+        <br>
+
+        Song Length:<br>
+        <input type="number" name="length" required>
+        <br>
+
+        Song Number<br>
+        <input type="number" name="trackNumber" required>
+        <br>
+
+        Album:<br>
+        <input type="text" name="album" required>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>
 

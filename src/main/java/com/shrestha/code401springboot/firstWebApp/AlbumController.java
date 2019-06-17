@@ -4,6 +4,7 @@ package com.shrestha.code401springboot.firstWebApp;
         import org.springframework.stereotype.Controller;
         import org.springframework.ui.Model;
         import org.springframework.web.bind.annotation.GetMapping;
+        import org.springframework.web.bind.annotation.PathVariable;
         import org.springframework.web.bind.annotation.PostMapping;
         import org.springframework.web.bind.annotation.RequestParam;
         import org.springframework.web.servlet.view.RedirectView;
@@ -14,6 +15,8 @@ public class AlbumController {
     @Autowired
     AlbumRepository albumRepository;
 
+    @Autowired
+    SongRepository songRepository;
 
     @GetMapping("/albums")
     public String albumDetails(Model m) {
@@ -27,6 +30,13 @@ public class AlbumController {
         Album add = new Album(title, artistName, songCount, length, imageUrl);
         albumRepository.save(add);
         return new RedirectView("/albums");
+    }
+
+    @GetMapping("albums/{album}")
+    public String albumWithSong( @PathVariable String album, Model m) {
+        Album a = albumRepository.findByTitle(album).get(0);
+        m.addAttribute("albums", a);
+        return "album_details";
     }
 
 }

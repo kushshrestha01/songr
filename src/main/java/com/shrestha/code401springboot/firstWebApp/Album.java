@@ -78,4 +78,12 @@ public class Album {
     public void setId(long id) {
         this.id = id;
     }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
 }
